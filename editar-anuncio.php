@@ -53,7 +53,7 @@ if(isset($_GET['id']) && !empty($_GET['id'])) {
 				$cats = $c->getLista();
 				foreach($cats as $cat):
 				?>
-				<option value="<?php echo $cat['id']; ?>" <?php echo ($info['id_categoria']==$cat['id'])?'selected="selected"':''; ?>><?php echo utf8_encode($cat['nome']); ?></option>
+				<option value="<?php echo $cat['id']; ?>" <?php echo ($info['id_categoria']==$cat['id'])?'selected="selected"':''; ?>><?php echo $cat['nome']; ?></option>
 				<?php
 				endforeach;
 				?>

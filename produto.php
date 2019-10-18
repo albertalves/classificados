@@ -36,7 +36,7 @@ $info = $a->getAnuncio($id);
 		</div>
 		<div class="col-sm-7">
 			<h1><?php echo $info['titulo']; ?></h1>
-			<h4><?php echo utf8_encode($info['categoria']); ?></h4>
+			<h4><?php echo $info['categoria']; ?></h4>
 			<p><?php echo $info['descricao']; ?></p>
 			<br/>
 			<h3>R$ <?php echo number_format($info['valor'], 2); ?></h3>
