@@ -6,13 +6,13 @@ class Anuncios {
 
 		$filtrostring = array('1=1');
 		if(!empty($filtros['categoria'])) {
-			$filtrostring[] = 'anuncios.id_categoria = :id_categoria';
+			$filtrostring[] = 'classificados_anuncios.id_categoria = :id_categoria';
 		}
 		if(!empty($filtros['preco'])) {
-			$filtrostring[] = 'anuncios.valor BETWEEN :preco1 AND :preco2';
+			$filtrostring[] = 'classificados_anuncios.valor BETWEEN :preco1 AND :preco2';
 		}
 		if(!empty($filtros['estado'])) {
-			$filtrostring[] = 'anuncios.estado = :estado';
+			$filtrostring[] = 'classificados_anuncios.estado = :estado';
 		}
 
 		$sql = $pdo->prepare("SELECT COUNT(*) as c FROM classificados_anuncios WHERE ".implode(' AND ', $filtrostring));
@@ -44,13 +44,13 @@ class Anuncios {
 
 		$filtrostring = array('1=1');
 		if(!empty($filtros['categoria'])) {
-			$filtrostring[] = 'anuncios.id_categoria = :id_categoria';
+			$filtrostring[] = 'classificados_anuncios.id_categoria = :id_categoria';
 		}
 		if(!empty($filtros['preco'])) {
-			$filtrostring[] = 'anuncios.valor BETWEEN :preco1 AND :preco2';
+			$filtrostring[] = 'classificados_anuncios.valor BETWEEN :preco1 AND :preco2';
 		}
 		if(!empty($filtros['estado'])) {
-			$filtrostring[] = 'anuncios.estado = :estado';
+			$filtrostring[] = 'classificados_anuncios.estado = :estado';
 		}
 
 		$sql = $pdo->prepare("SELECT
